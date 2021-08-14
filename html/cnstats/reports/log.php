@@ -87,46 +87,46 @@ function ptable_ex() {
 print $TABLE;
 $expanded=$HTTP_COOKIE_VARS["cnstats_report_log"]=="visible"?true:false;
 ?>
-<tr class="tbl0"><td><a href="JavaScript:ptable_ex();"><img id='pimg' src='img/<?=!$expanded?"expand":"colapse";?>.gif' width=17 height=17 border=0></a></td><td width='95%'><?=$LANG["log_additional"];?>
+<tr class="tbl0"><td><a href="JavaScript:ptable_ex();"><img id='pimg' src='img/<?php=!$expanded?"expand":"colapse";?>.gif' width=17 height=17 border=0></a></td><td width='95%'><?php=$LANG["log_additional"];?>
 </td></tr></table>
 
-<table width='<?=$TW;?>' id='ptable' cellspacing='1' border='0' cellpadding='3' class=tblborder style='table-layout:fixed;' class="<?=($expanded?"vis1":"vis2");?>">
+<table width='<?php=$TW;?>' id='ptable' cellspacing='1' border='0' cellpadding='3' class=tblborder style='table-layout:fixed;' class="<?php=($expanded?"vis1":"vis2");?>">
 <form action="index.php" method="get">
-<tr class="tbl1"><td width="30%"><?=$LANG["log_page"];?></td><td width="20%"><?=CustomSelect("page");?></td><td width="50%"><?=CustomInput("page");?></td></tr>
-<tr class="tbl2"><td nowrap><?=$LANG["log_referer"];?></td><td><?=CustomSelect("referer");?></td><td><?=CustomInput("referer");?></td></tr>
-<tr class="tbl1"><td><?=$LANG["log_language"];?></td><td><?=CustomSelect("language");?></td><td><?=CustomInput("language");?></td></tr>
-<tr class="tbl2"><td><?=$LANG["log_useragent"];?></td><td><?=CustomSelect("agent");?></td><td><?=CustomInput("agent");?></td></tr>
-<tr class="tbl1"><td><?=$LANG["log_ip"];?></td><td>
+<tr class="tbl1"><td width="30%"><?php=$LANG["log_page"];?></td><td width="20%"><?php=CustomSelect("page");?></td><td width="50%"><?php=CustomInput("page");?></td></tr>
+<tr class="tbl2"><td nowrap><?php=$LANG["log_referer"];?></td><td><?php=CustomSelect("referer");?></td><td><?php=CustomInput("referer");?></td></tr>
+<tr class="tbl1"><td><?php=$LANG["log_language"];?></td><td><?php=CustomSelect("language");?></td><td><?php=CustomInput("language");?></td></tr>
+<tr class="tbl2"><td><?php=$LANG["log_useragent"];?></td><td><?php=CustomSelect("agent");?></td><td><?php=CustomInput("agent");?></td></tr>
+<tr class="tbl1"><td><?php=$LANG["log_ip"];?></td><td>
 
 <SELECT name="sel_ip" style="width:100%" OnClick="EnaDis('inp_ip',this.value!=2?true:false);">
-<OPTION <?=$HTTP_GET_VARS["sel_ip"]=="0"?"SELECTED":"";?> value="0"><?=$LANG["log_any"];?>
-<OPTION <?=$HTTP_GET_VARS["sel_ip"]=="1"?"SELECTED":"";?> value="1"><?=$LANG["log_hidden"];?>
-<OPTION <?=$HTTP_GET_VARS["sel_ip"]=="2"?"SELECTED":"";?> value="2"><?=$LANG["log_calculate"];?>
+<OPTION <?php=$HTTP_GET_VARS["sel_ip"]=="0"?"SELECTED":"";?> value="0"><?php=$LANG["log_any"];?>
+<OPTION <?php=$HTTP_GET_VARS["sel_ip"]=="1"?"SELECTED":"";?> value="1"><?php=$LANG["log_hidden"];?>
+<OPTION <?php=$HTTP_GET_VARS["sel_ip"]=="2"?"SELECTED":"";?> value="2"><?php=$LANG["log_calculate"];?>
 </SELECT>
                             
-</td><td><?=CustomInput("ip",$HTTP_GET_VARS["sel_ip"]==2?"":"disabled");?></td></tr>
-<tr class="tbl2"><td><?=$LANG["log_proxy"];?></td><td>
+</td><td><?php=CustomInput("ip",$HTTP_GET_VARS["sel_ip"]==2?"":"disabled");?></td></tr>
+<tr class="tbl2"><td><?php=$LANG["log_proxy"];?></td><td>
 
 <SELECT name="sel_proxy" style="width:100%" OnClick="EnaDis('inp_proxy',this.value!=3?true:false);">
-<OPTION <?=$HTTP_GET_VARS["sel_proxy"]=="0"?"SELECTED":"";?> title="<?=$LANG["log_proxy1"];?>" value="0"><?=$LANG["log_any"];?>
-<OPTION <?=$HTTP_GET_VARS["sel_proxy"]=="1"?"SELECTED":"";?> title="<?=$LANG["log_proxy2"];?>" value="1"><?=$LANG["log_without_proxy"];?>
-<OPTION <?=$HTTP_GET_VARS["sel_proxy"]=="2"?"SELECTED":"";?> title="<?=$LANG["log_proxy3"];?>" value="2"><?=$LANG["log_any_proxy"];?>
-<OPTION <?=$HTTP_GET_VARS["sel_proxy"]=="3"?"SELECTED":"";?> title="<?=$LANG["log_proxy4"];?>" value="3"><?=$LANG["log_with_proxy"];?>
+<OPTION <?php=$HTTP_GET_VARS["sel_proxy"]=="0"?"SELECTED":"";?> title="<?php=$LANG["log_proxy1"];?>" value="0"><?php=$LANG["log_any"];?>
+<OPTION <?php=$HTTP_GET_VARS["sel_proxy"]=="1"?"SELECTED":"";?> title="<?php=$LANG["log_proxy2"];?>" value="1"><?php=$LANG["log_without_proxy"];?>
+<OPTION <?php=$HTTP_GET_VARS["sel_proxy"]=="2"?"SELECTED":"";?> title="<?php=$LANG["log_proxy3"];?>" value="2"><?php=$LANG["log_any_proxy"];?>
+<OPTION <?php=$HTTP_GET_VARS["sel_proxy"]=="3"?"SELECTED":"";?> title="<?php=$LANG["log_proxy4"];?>" value="3"><?php=$LANG["log_with_proxy"];?>
 </SELECT>
 
-</td><td><?=CustomInput("proxy",$HTTP_GET_VARS["sel_proxy"]==3?"":"disabled");?></td></tr>
+</td><td><?php=CustomInput("proxy",$HTTP_GET_VARS["sel_proxy"]==3?"":"disabled");?></td></tr>
 
 
-<tr class="tbl1"><td><?=$LANG["log_country"];?></td><td>
+<tr class="tbl1"><td><?php=$LANG["log_country"];?></td><td>
 
-<SELECT OnClick="EnaDis('inp_country',this.value==0?true:false);" name="sel_country" style="width:100%" id="sel_country" <?=$HTTP_GET_VARS["hosts"]=="yes"?"":"disabled";?>>
-<OPTION value="0" <?=$HTTP_GET_VARS["sel_country"]=="0"?"SELECTED":"";?>><?=$LANG["log_any"];?>
-<OPTION value="1" <?=$HTTP_GET_VARS["sel_country"]=="1"?"SELECTED":"";?>><?=$LANG["log_calculate"];?>
+<SELECT OnClick="EnaDis('inp_country',this.value==0?true:false);" name="sel_country" style="width:100%" id="sel_country" <?php=$HTTP_GET_VARS["hosts"]=="yes"?"":"disabled";?>>
+<OPTION value="0" <?php=$HTTP_GET_VARS["sel_country"]=="0"?"SELECTED":"";?>><?php=$LANG["log_any"];?>
+<OPTION value="1" <?php=$HTTP_GET_VARS["sel_country"]=="1"?"SELECTED":"";?>><?php=$LANG["log_calculate"];?>
 </SELECT>
 
 </td><td>
 
-<SELECT name="inp_country" id="inp_country" style="width:100%" <?=($HTTP_GET_VARS["hosts"]=="yes"&&$HTTP_GET_VARS["sel_country"]!=0)?"":"disabled";?>>
+<SELECT name="inp_country" id="inp_country" style="width:100%" <?php=($HTTP_GET_VARS["hosts"]=="yes"&&$HTTP_GET_VARS["sel_country"]!=0)?"":"disabled";?>>
 <?php
 while (list ($key, $val) = each ($COUNTRY)) {
 	$code=ord($key[0])*256+ord($key[1]);
@@ -136,19 +136,19 @@ while (list ($key, $val) = each ($COUNTRY)) {
 </SELECT>
 </td></tr>                                                                                     
 
-<tr class="tbl1"><td width="30%"><?=$LANG["city"];?></td><td width="20%"><?=CustomSelect("city",$HTTP_GET_VARS["hosts"]=="yes"?"":"disabled");?></td><td width="50%"><?=CustomInput("city");?></td></tr>
+<tr class="tbl1"><td width="30%"><?php=$LANG["city"];?></td><td width="20%"><?php=CustomSelect("city",$HTTP_GET_VARS["hosts"]=="yes"?"":"disabled");?></td><td width="50%"><?php=CustomInput("city");?></td></tr>
 
 <tr class="tbl2"><td colspan="3">
-<table><tr><td><input <?=($HTTP_GET_VARS["hosts"]=="yes"?"checked":"");?> onClick="eCountry(this.checked)" type="checkbox" name="hosts" value="yes"></td><td width="50%"><?=$LANG["log_hosts"];?></td>
-<td><input <?=($HTTP_GET_VARS["users"]=="yes"?"checked":"");?> type="checkbox" name="users" value="yes"></td><td width="50%"><?=$LANG["log_users"];?></td></tr></table>
+<table><tr><td><input <?php=($HTTP_GET_VARS["hosts"]=="yes"?"checked":"");?> onClick="eCountry(this.checked)" type="checkbox" name="hosts" value="yes"></td><td width="50%"><?php=$LANG["log_hosts"];?></td>
+<td><input <?php=($HTTP_GET_VARS["users"]=="yes"?"checked":"");?> type="checkbox" name="users" value="yes"></td><td width="50%"><?php=$LANG["log_users"];?></td></tr></table>
 </td></tr>
 <tr class="tbl1"><td colspan="3" align="center">
 <input type="hidden" name="st" value="log">
-<input type="hidden" name="by" value="<?=$by;?>">
-<input type="hidden" name="ftm" value="<?=intval($ftm);?>">
-<input type="hidden" name="stm" value="<?=intval($stm);?>">
-<input type="hidden" name="filter" value="<?=$filter;?>">
-<input type="submit" value="<?=$LANG["log_show"];?>">
+<input type="hidden" name="by" value="<?php=$by;?>">
+<input type="hidden" name="ftm" value="<?php=intval($ftm);?>">
+<input type="hidden" name="stm" value="<?php=intval($stm);?>">
+<input type="hidden" name="filter" value="<?php=$filter;?>">
+<input type="submit" value="<?php=$LANG["log_show"];?>">
 </td></tr>
 </form>
 </table>

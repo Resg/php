@@ -53,8 +53,8 @@ if ($count!=0) {
 ?>
 <HTML>
 <HEAD>
-<TITLE><?=$LANG["softname"];?></TITLE>
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=<?=$LANG["charset"];?>">
+<TITLE><?php=$LANG["softname"];?></TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=<?php=$LANG["charset"];?>">
 <STYLE TYPE="text/css">
 <!--
 td {font-family:tahoma;font-size: 11px; color: #333}
@@ -71,10 +71,10 @@ print "<img src='graph/countries.php?&zoom=1".$gstr."' width='770' height='577' 
 <div align=center>
 <table cellspacing="1" cellpadding="0" border="0">
 <tr>
-<td width=8><img src="img/5.gif" width="9" height="11" border="0"></td><td width='100'>> 50% (<?=$LIMIT[5];?>)</td>
-<td width=8><img src="img/4.gif" width="9" height="11" border="0"></td><td width='100'>> 10% (<?=$LIMIT[4];?>)</td>
-<td width=8><img src="img/3.gif" width="9" height="11" border="0"></td><td width='90'>> 2% (<?=$LIMIT[3];?>)</td>
-<td width=8><img src="img/2.gif" width="9" height="11" border="0"></td><td width='90'>> 1% (<?=$LIMIT[2];?>)</td>
+<td width=8><img src="img/5.gif" width="9" height="11" border="0"></td><td width='100'>> 50% (<?php=$LIMIT[5];?>)</td>
+<td width=8><img src="img/4.gif" width="9" height="11" border="0"></td><td width='100'>> 10% (<?php=$LIMIT[4];?>)</td>
+<td width=8><img src="img/3.gif" width="9" height="11" border="0"></td><td width='90'>> 2% (<?php=$LIMIT[3];?>)</td>
+<td width=8><img src="img/2.gif" width="9" height="11" border="0"></td><td width='90'>> 1% (<?php=$LIMIT[2];?>)</td>
 <td width=8><img src="img/1.gif" width="9" height="11" border="0"></td><td width='30'>> 0</td>
 </tr>
 </table>
@@ -110,13 +110,13 @@ print "<img src='graph/countries.php?&zoom=0".$gstr."' width='465' height='348' 
 <div align=right>
 <table cellspacing="1" cellpadding="0" border="0">
 <tr>
-<td width=8><img src="img/5.gif" width="9" height="11" border="0"></td><td width='100'>> 50% (<?=$LIMIT[5];?>)</td>
-<td width=8><img src="img/4.gif" width="9" height="11" border="0"></td><td width='100'>> 10% (<?=$LIMIT[4];?>)</td>
-<td width=8><img src="img/3.gif" width="9" height="11" border="0"></td><td width='90'>> 2% (<?=$LIMIT[3];?>)</td>
-<td width=8><img src="img/2.gif" width="9" height="11" border="0"></td><td width='90'>> 1% (<?=$LIMIT[2];?>)</td>
+<td width=8><img src="img/5.gif" width="9" height="11" border="0"></td><td width='100'>> 50% (<?php=$LIMIT[5];?>)</td>
+<td width=8><img src="img/4.gif" width="9" height="11" border="0"></td><td width='100'>> 10% (<?php=$LIMIT[4];?>)</td>
+<td width=8><img src="img/3.gif" width="9" height="11" border="0"></td><td width='90'>> 2% (<?php=$LIMIT[3];?>)</td>
+<td width=8><img src="img/2.gif" width="9" height="11" border="0"></td><td width='90'>> 1% (<?php=$LIMIT[2];?>)</td>
 <td width=8><img src="img/1.gif" width="9" height="11" border="0"></td><td width='30'>> 0</td>
 <td class="tbl1" bgcolor="#D4F3D7"><img src="img/zoom.gif" width="18" height="17" hspace="2" vspace="2" border="0"></td>
-<td class="tbl1" bgcolor="#D4F3D7">&nbsp;<a href="javascript:wopen('map','index.php?nowrap=1&amp;zoom=1&amp;st=<?=$st;?>&amp;stm=<?=$stm;?>&amp;ftm=<?=$ftm;?>&amp;filter=<?=$filter;?>',770,600);"><?=$LANG["zoomin"];?></a>&nbsp;</td>
+<td class="tbl1" bgcolor="#D4F3D7">&nbsp;<a href="javascript:wopen('map','index.php?nowrap=1&amp;zoom=1&amp;st=<?php=$st;?>&amp;stm=<?php=$stm;?>&amp;ftm=<?php=$ftm;?>&amp;filter=<?php=$filter;?>',770,600);"><?php=$LANG["zoomin"];?></a>&nbsp;</td>
 </tr>
 </table>
 </div>

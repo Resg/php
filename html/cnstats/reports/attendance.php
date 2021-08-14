@@ -28,22 +28,22 @@ function stable($color,$text) {
         return("<table cellspacing=0 cellpadding=0 border=0><tr><td><table style='width:12px;height:12px;' cellspacing=1 cellpadding=1 border=0 bgcolor='black'><tr><td bgcolor='".$color."'></td></tr></table></td><td>&nbsp;<B>".$text."</B></td></tr></table>");
         }
 
-// Входные параметры
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 if ($HTTP_GET_VARS["second"]!=1) {
         $cb_hosts=$cb_hits=$cb_users=$table="on";
         $type=1;
         }
 
-// Начальные значения
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 $mini=$minh=$minu=99999999;
 $maxi=$maxh=$maxu=0;
 
-// Расчитываем значения для графиков
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 $DATA["x"]=$DATA[0]=$DATA[1]=$DATA[2]=Array();
 $limit=44;
 
-// Выводим таблицу #############################################################
-if ($type==0) { /* По часам ############################################# */
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ #############################################################
+if ($type==0) { /* пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ ############################################# */
 
         $tm=time()+$COUNTER["timeoffset"];
         $sdate=date("Y-m-d H:i:s",mktime(0,0,0,date("m",$tm) ,date("d",$tm),date("Y",$tm)));
@@ -116,7 +116,7 @@ if ($type==0) { /* По часам ############################################# */
         $html.="</table></center>";
         } /* of if ($type==0) */
 
-if ($type==1) { /* По дням ############################################## */
+if ($type==1) { /* пїЅпїЅ пїЅпїЅпїЅпїЅ ############################################## */
         $r=cnstats_sql_query("select LEFT(date,10),hits,hosts,users from cns_counter_total ORDER BY date desc  LIMIT $limit;");
 
         $html.="<center><br><table width=".$TW." cellspacing=1 cellpadding=3 class=tblborder>";
@@ -182,7 +182,7 @@ if ($type==1) { /* По дням ############################################## */
         $html.="</table></center>";
         } /* of if ($type==1) */
 
-if ($type==2) { /* По неделям ########################################### */
+if ($type==2) { /* пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ ########################################### */
         $r=cnstats_sql_query("select LEFT(date,10),hits,hosts,users from cns_counter_total ORDER BY date desc  LIMIT ".(7*$limit).";");
 
         $html.="<center><br><table width=".$TW." cellspacing=1 cellpadding=3 class=tblborder>";
@@ -264,7 +264,7 @@ if ($type==2) { /* По неделям ########################################### */
         $html.="</table></center>";
         } /* of if ($type==2) */
 
-if ($type==3) { /* По месяцам ########################################### */
+if ($type==3) { /* пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ ########################################### */
         $r=cnstats_sql_query("select LEFT(date,7),sum(hits),sum(hosts),sum(users) from cns_counter_total GROUP BY LEFT(date,7) ORDER BY date desc LIMIT $limit;");
 
         $html.="<center><br><table width=".$TW." cellspacing=1 cellpadding=3 class=tblborder>";
@@ -337,18 +337,18 @@ $DATA["x"]=array_reverse($DATA["x"]);
 
 $HTTP_SESSION_VARS["DATA"]=$DATA;
 
-// Если выбран график в ручную, то игнорируем настройки
+// пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 if (isset($HTTP_GET_VARS["graph"])) $CONFIG["diagram"]=intval($HTTP_GET_VARS["graph"]);
 else $graph=intval($CONFIG["diagram"]);
 
-// Определяем тип графика
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 $GDVERSION=gdVersion();
 
-// Если GD 2.0, но анти-алиасинг отключен, то делаем вид,
-// что GD 1.0 и тогда графики сглаживаться не будут
+// пїЅпїЅпїЅпїЅ GD 2.0, пїЅпїЅ пїЅпїЅпїЅпїЅ-пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ,
+// пїЅпїЅпїЅ GD 1.0 пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 if ($GDVERSION==2 && $CONFIG["antialias"]==0) $GDVERSION=1;
 
-// Если нет GD, то в любом случае включаем HTML график
+// пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ GD, пїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ HTML пїЅпїЅпїЅпїЅпїЅпїЅ
 if ($GDVERSION==0) $CONFIG["diagram"]=0;
 
 if ($CONFIG["diagram"]>0 && $CONFIG["diagram"]<4) {
@@ -378,7 +378,7 @@ function redraw(i) {
 
 <center>
 <form action="index.php" method="get" class="m0" id="gf">
-<table width="<?=$TW;?>" cellspacing="1" cellpadding="0" bgcolor="#D4F3D7"><tr class="tbl2"><td>
+<table width="<?php=$TW;?>" cellspacing="1" cellpadding="0" bgcolor="#D4F3D7"><tr class="tbl2"><td>
 <table cellspacing="0" cellpadding="2" border="0" width="100%">
 <tr>
 <?php
@@ -388,10 +388,10 @@ if ($GDVERSION>0) {
         }
 ?>
         <td>
-        <table cellspacing="0" cellpadding="0" border="0"><tr><td><input type="checkbox" name="cb_hits" <?=($cb_hits=="on"?"checked":"");?>></td><td style="color:red;"><B><?=$LANG["hits"];?></B></td></tr></table>
+        <table cellspacing="0" cellpadding="0" border="0"><tr><td><input type="checkbox" name="cb_hits" <?php=($cb_hits=="on"?"checked":"");?>></td><td style="color:red;"><B><?php=$LANG["hits"];?></B></td></tr></table>
         </td>
         <td>
-        <table cellspacing="0" cellpadding="0" border="0"><tr><td><input type="checkbox" name="s" <?=($s=="on"?"checked":"");?>></td><td><?=$LANG["smooth graphics"];?></td></tr></table>
+        <table cellspacing="0" cellpadding="0" border="0"><tr><td><input type="checkbox" name="s" <?php=($s=="on"?"checked":"");?>></td><td><?php=$LANG["smooth graphics"];?></td></tr></table>
         </td>
 </tr>
 <tr>
@@ -402,7 +402,7 @@ if ($GDVERSION>0) {
         }
 ?>
         <td>
-        <table cellspacing="0" cellpadding="0" border="0"><tr><td><input type="checkbox" name="cb_users" <?=($cb_users=="on"?"checked":"");?>></td><td style="color:green;"><B><?=$LANG["visitors"];?></B></td></tr></table>
+        <table cellspacing="0" cellpadding="0" border="0"><tr><td><input type="checkbox" name="cb_users" <?php=($cb_users=="on"?"checked":"");?>></td><td style="color:green;"><B><?php=$LANG["visitors"];?></B></td></tr></table>
         </td>
         <td>&nbsp;</td>
 </tr>
@@ -414,34 +414,34 @@ if ($GDVERSION>0) {
         }
 ?>
         <td>
-        <table cellspacing="0" cellpadding="0" border="0"><tr><td><input type="checkbox" name="cb_hosts" <?=($cb_hosts=="on"?"checked":"");?>></td><td style="color:blue;"><B><?=$LANG["hosts"];?></B></td></tr></table>
+        <table cellspacing="0" cellpadding="0" border="0"><tr><td><input type="checkbox" name="cb_hosts" <?php=($cb_hosts=="on"?"checked":"");?>></td><td style="color:blue;"><B><?php=$LANG["hosts"];?></B></td></tr></table>
         </td>
         <td align="right">
         <table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td>&nbsp;
                 <select name="type">
-                <option value="0" <?=($type==0?"selected":"");?>><?=$LANG["by hours"];?>
-                <option value="1" <?=($type==1?"selected":"");?>><?=$LANG["by days"];?>
-                <option value="2" <?=($type==2?"selected":"");?>><?=$LANG["by weeks"];?>
-                <option value="3" <?=($type==3?"selected":"");?>><?=$LANG["by moths"];?>
+                <option value="0" <?php=($type==0?"selected":"");?>><?php=$LANG["by hours"];?>
+                <option value="1" <?php=($type==1?"selected":"");?>><?php=$LANG["by days"];?>
+                <option value="2" <?php=($type==2?"selected":"");?>><?php=$LANG["by weeks"];?>
+                <option value="3" <?php=($type==3?"selected":"");?>><?php=$LANG["by moths"];?>
                 </select>
         </td><td align="right">
-                <input type="submit" value="<?=$LANG["update"];?>">
+                <input type="submit" value="<?php=$LANG["update"];?>">
         </td></tr></table>
         </td>
 </tr>
 </table>
 </td></tr></table>
-<input type=hidden name="st" value="<?=$st;?>">
-<input type=hidden name="stm" value="<?=$stm;?>">
-<input type=hidden name="ftm" value="<?=$ftm;?>">
-<input type=hidden name="filter" value="<?=$filter;?>">
-<input type=hidden name="day" value="<?=$day;?>">
-<input type=hidden name="month" value="<?=$month;?>">
-<input type=hidden name="year" value="<?=$year;?>">
-<input type=hidden name="graph" value="<?=$graph;?>">
-<input type=hidden name="prom" value="<?=$prom;?>">
+<input type=hidden name="st" value="<?php=$st;?>">
+<input type=hidden name="stm" value="<?php=$stm;?>">
+<input type=hidden name="ftm" value="<?php=$ftm;?>">
+<input type=hidden name="filter" value="<?php=$filter;?>">
+<input type=hidden name="day" value="<?php=$day;?>">
+<input type=hidden name="month" value="<?php=$month;?>">
+<input type=hidden name="year" value="<?php=$year;?>">
+<input type=hidden name="graph" value="<?php=$graph;?>">
+<input type=hidden name="prom" value="<?php=$prom;?>">
 <input type=hidden name="second" value="1">
-<input type=hidden name="graph" value="<?=$graph;?>" id="ge">
+<input type=hidden name="graph" value="<?php=$graph;?>" id="ge">
 </form>
 
 <?php

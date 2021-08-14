@@ -1,4 +1,4 @@
-<?
+<?php
 $inpage=40;
 $tld=intval($HTTP_GET_VARS["tld"]);
 $filter=$HTTP_GET_VARS["filter"];

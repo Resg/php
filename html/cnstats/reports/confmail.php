@@ -1,4 +1,4 @@
-<?
+<?php
 $filter=$HTTP_GET_VARS["filter"];
 
 if ($HTTP_GET_VARS["action"]=="save") {
@@ -23,37 +23,37 @@ $r=cnstats_sql_query("SELECT mail_day, mail_email, mail_subject, mail_content FR
 $a=mysql_fetch_array($r);
 ?>
 <form class="m0" method="get" action="index.php" name="frm1">
-<?=$TABLE;?>
-<tr class=tbl0><td colspan=2 align=center><b><?=$LANG["period"];?></b></td></tr>
-<tr class=tbl1><td colspan=2><input <?php if ($a["mail_day"]==0) print "checked"; ?> type=radio name=period value='daily' onClick='document.forms["frm1"].elements["day"].disabled=true;'><?=$LANG["everyday"];?></td></tr>
-<tr class=tbl2><td colspan=2><input <?php if ($a["mail_day"]!=0) print "checked"; ?> type=radio name=period value='weekly' onClick='document.forms["frm1"].elements["day"].disabled=false;'><?=$LANG["onceperweek"];?></td></tr>
-<tr class=tbl1><td nowrap><?=$LANG["whatday"];?></td><td width='100%'>
+<?php=$TABLE;?>
+<tr class=tbl0><td colspan=2 align=center><b><?php=$LANG["period"];?></b></td></tr>
+<tr class=tbl1><td colspan=2><input <?php if ($a["mail_day"]==0) print "checked"; ?> type=radio name=period value='daily' onClick='document.forms["frm1"].elements["day"].disabled=true;'><?php=$LANG["everyday"];?></td></tr>
+<tr class=tbl2><td colspan=2><input <?php if ($a["mail_day"]!=0) print "checked"; ?> type=radio name=period value='weekly' onClick='document.forms["frm1"].elements["day"].disabled=false;'><?php=$LANG["onceperweek"];?></td></tr>
+<tr class=tbl1><td nowrap><?php=$LANG["whatday"];?></td><td width='100%'>
 <select name=day style='width:100%;' <?php if ($a["mail_day"]==0) print "disabled"; ?>>
-<option value=1 <?php if ($a["mail_day"]==1) print "selected"; ?>><?=$LANG["d1"];?>
-<option value=2 <?php if ($a["mail_day"]==2) print "selected"; ?>><?=$LANG["d2"];?>
-<option value=3 <?php if ($a["mail_day"]==3) print "selected"; ?>><?=$LANG["d3"];?>
-<option value=4 <?php if ($a["mail_day"]==4) print "selected"; ?>><?=$LANG["d4"];?>
-<option value=5 <?php if ($a["mail_day"]==5) print "selected"; ?>><?=$LANG["d5"];?>
-<option value=6 <?php if ($a["mail_day"]==6) print "selected"; ?>><?=$LANG["d6"];?>
-<option value=7 <?php if ($a["mail_day"]==7) print "selected"; ?>><?=$LANG["d7"];?>
+<option value=1 <?php if ($a["mail_day"]==1) print "selected"; ?>><?php=$LANG["d1"];?>
+<option value=2 <?php if ($a["mail_day"]==2) print "selected"; ?>><?php=$LANG["d2"];?>
+<option value=3 <?php if ($a["mail_day"]==3) print "selected"; ?>><?php=$LANG["d3"];?>
+<option value=4 <?php if ($a["mail_day"]==4) print "selected"; ?>><?php=$LANG["d4"];?>
+<option value=5 <?php if ($a["mail_day"]==5) print "selected"; ?>><?php=$LANG["d5"];?>
+<option value=6 <?php if ($a["mail_day"]==6) print "selected"; ?>><?php=$LANG["d6"];?>
+<option value=7 <?php if ($a["mail_day"]==7) print "selected"; ?>><?php=$LANG["d7"];?>
 </select>
 </td></tr>
 
-<tr class=tbl0><td colspan=2 align=center><b><?=$LANG["mailandmail"];?></b></td></tr>
-<tr class=tbl2><td>E-Mail</td><td><input value='<?=htmlspecialchars($a["mail_email"]);?>' type=text name=email style='width:100%;'></td></tr>
-<tr class=tbl1><td><?=$LANG["subject"];?></td><td><input value='<?=htmlspecialchars($a["mail_subject"]);?>' type=text name=subject style='width:100%;'></td></tr>
+<tr class=tbl0><td colspan=2 align=center><b><?php=$LANG["mailandmail"];?></b></td></tr>
+<tr class=tbl2><td>E-Mail</td><td><input value='<?php=htmlspecialchars($a["mail_email"]);?>' type=text name=email style='width:100%;'></td></tr>
+<tr class=tbl1><td><?php=$LANG["subject"];?></td><td><input value='<?php=htmlspecialchars($a["mail_subject"]);?>' type=text name=subject style='width:100%;'></td></tr>
 
-<tr class=tbl0><td colspan=2 align=center><b><?=$LANG["inreport"];?></b></td></tr>
-<tr class=tbl2><td colspan=2><input <?php if (($a["mail_content"]&1)!=0) print "checked"; ?> type=checkbox name=what1><?=$LANG["hitshostssessions"];?></td></tr>
-<tr class=tbl1><td colspan=2><input <?php if (($a["mail_content"]&2)!=0) print "checked"; ?> type=checkbox name=what2><?=$LANG["topreferers"];?><br><small><?=$LANG["slow"];?></small></td></tr>
-<tr class=tbl2><td colspan=2><input <?php if (($a["mail_content"]&4)!=0) print "checked"; ?> type=checkbox name=what3><?=$LANG["toppages"];?><br><small><?=$LANG["slow"];?></small></td></tr>
-<tr class=tbl1><td colspan=2 align=center><input type=submit value='<?=$LANG["save"];?>'></td></tr>
+<tr class=tbl0><td colspan=2 align=center><b><?php=$LANG["inreport"];?></b></td></tr>
+<tr class=tbl2><td colspan=2><input <?php if (($a["mail_content"]&1)!=0) print "checked"; ?> type=checkbox name=what1><?php=$LANG["hitshostssessions"];?></td></tr>
+<tr class=tbl1><td colspan=2><input <?php if (($a["mail_content"]&2)!=0) print "checked"; ?> type=checkbox name=what2><?php=$LANG["topreferers"];?><br><small><?php=$LANG["slow"];?></small></td></tr>
+<tr class=tbl2><td colspan=2><input <?php if (($a["mail_content"]&4)!=0) print "checked"; ?> type=checkbox name=what3><?php=$LANG["toppages"];?><br><small><?php=$LANG["slow"];?></small></td></tr>
+<tr class=tbl1><td colspan=2 align=center><input type=submit value='<?php=$LANG["save"];?>'></td></tr>
 </table>
 <input type=hidden name='action' value='save'>
 <input type=hidden name='st' value='confmail'>
-<input type=hidden name='stm' value='<?=$stm;?>'>
-<input type=hidden name='ftm' value='<?=$ftm;?>'>
-<input type=hidden name='filter' value='<?=$filter;?>'>
+<input type=hidden name='stm' value='<?php=$stm;?>'>
+<input type=hidden name='ftm' value='<?php=$ftm;?>'>
+<input type=hidden name='filter' value='<?php=$filter;?>'>
 <input type=hidden name='nowrap' value='1'>
 </form>
 <?php

@@ -1,4 +1,4 @@
-<?
+<?php
 error_reporting(0);
 
 $STATS_CONF["is_cookie"]=intval($HTTP_GET_VARS["c"]);

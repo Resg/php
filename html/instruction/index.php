@@ -1,4 +1,4 @@
-<?	include($_SERVER['DOCUMENT_ROOT'].'/include/header.php');?>
+<?php	include($_SERVER['DOCUMENT_ROOT'].'/include/header.php');?>
             
 			<h1><img src="/i/captions/h_inst.gif" width="434" height="26" alt="" /></h1>
 
@@ -40,4 +40,4 @@
 	</object>
 </noscript>
          
-<?	include($_SERVER['DOCUMENT_ROOT'].'/include/footer.php');?>
+<?php	include($_SERVER['DOCUMENT_ROOT'].'/include/footer.php');?>

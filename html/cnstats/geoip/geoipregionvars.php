@@ -1,4 +1,4 @@
-<?php
+<?phpphp
 # Copyright 2003 Maxmind LLC All Rights Reserved
 $ISO = array(
 "CA" => array(
@@ -1133,7 +1133,7 @@ $FIPS = array(
 "53" => "Tigray",
 "54" => "YeDebub Biheroch Bihereseboch na Hizboch"),
 "FI" => array(
-"01" => "Ã?land",
+"01" => "ï¿½?land",
 "06" => "Lapland",
 "08" => "Oulu",
 "13" => "Southern Finland",

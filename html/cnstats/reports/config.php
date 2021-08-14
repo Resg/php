@@ -55,37 +55,37 @@ if (empty($a["datetimes_format"])) $a["datetimes_format"]=$LANG["datetimes_forma
 if ($a["timeoffset"]==1) $a["timeoffset"]=date("Z")/3600;
 ?>
 <form action='index.php' method='get'>
-<?=$TABLE;?>
+<?php=$TABLE;?>
 <tr class="tbl0"><td width="100%"></td><td width="170"></td></tr>
-<tr class="tbl0"><td colspan="2" align="center"><b><?=$LANG["configmain"];?></b></td></tr>
+<tr class="tbl0"><td colspan="2" align="center"><b><?php=$LANG["configmain"];?></b></td></tr>
 
-<tr class="tbl2"><td width="100%"><?=$LANG["show diagrams"];?></td><td width="1%"><?=YesNo("gauge",$a["gauge"]);?></td></tr>
-<tr class="tbl2"><td><?=$LANG["show percents"];?></td><td><?=YesNo("percents",$a["percents"]);?></td></tr>
+<tr class="tbl2"><td width="100%"><?php=$LANG["show diagrams"];?></td><td width="1%"><?php=YesNo("gauge",$a["gauge"]);?></td></tr>
+<tr class="tbl2"><td><?php=$LANG["show percents"];?></td><td><?php=YesNo("percents",$a["percents"]);?></td></tr>
 
-</table><br><?=$TABLE;?>
+</table><br><?php=$TABLE;?>
 <tr class="tbl0"><td width="100%"></td><td width="170"></td></tr>
-<tr class="tbl0"><td colspan="2" align="center"><b><?=$LANG["configgraph"];?></b></td></tr>
+<tr class="tbl0"><td colspan="2" align="center"><b><?php=$LANG["configgraph"];?></b></td></tr>
 
-<tr class="tbl2"><td><?=$LANG["default diagrams"];?></td><td>
+<tr class="tbl2"><td><?php=$LANG["default diagrams"];?></td><td>
 
 <table>
-<tr><td><input <?=(gdVersion()==0?"disabled":"");?> type="radio" name="diagram" value="1" <?=($a["diagram"]==1?"checked":"");?>></td><td><img src="img/graph_1_c.gif" vspace="2" width="130" height="75"></td></tr>
-<tr><td><input <?=(gdVersion()==0?"disabled":"");?> type="radio" name="diagram" value="2" <?=($a["diagram"]==2?"checked":"");?>></td><td><img src="img/graph_2_c.gif" vspace="2" width="130" height="75"></td></tr>
-<tr><td><input <?=(gdVersion()==0?"disabled":"");?> type="radio" name="diagram" value="3" <?=($a["diagram"]==3?"checked":"");?>></td><td><img src="img/graph_3_c.gif" vspace="2" width="130" height="75"></td></tr>
+<tr><td><input <?php=(gdVersion()==0?"disabled":"");?> type="radio" name="diagram" value="1" <?php=($a["diagram"]==1?"checked":"");?>></td><td><img src="img/graph_1_c.gif" vspace="2" width="130" height="75"></td></tr>
+<tr><td><input <?php=(gdVersion()==0?"disabled":"");?> type="radio" name="diagram" value="2" <?php=($a["diagram"]==2?"checked":"");?>></td><td><img src="img/graph_2_c.gif" vspace="2" width="130" height="75"></td></tr>
+<tr><td><input <?php=(gdVersion()==0?"disabled":"");?> type="radio" name="diagram" value="3" <?php=($a["diagram"]==3?"checked":"");?>></td><td><img src="img/graph_3_c.gif" vspace="2" width="130" height="75"></td></tr>
 </table>
 
-<tr class="tbl2"><td><?=$LANG["antialias"];?></td><td><?=YesNo("antialias",$a["antialias"],gdVersion()<2?"disabled":"","no");?></td></tr>
+<tr class="tbl2"><td><?php=$LANG["antialias"];?></td><td><?php=YesNo("antialias",$a["antialias"],gdVersion()<2?"disabled":"","no");?></td></tr>
 
-</table><br><?=$TABLE;?>
+</table><br><?php=$TABLE;?>
 <tr class="tbl0"><td width="100%"></td><td width="170"></td></tr>
-<tr class="tbl0"><td colspan="2" align="center"><b><?=$LANG["configdate"];?></b></td></tr>
+<tr class="tbl0"><td colspan="2" align="center"><b><?php=$LANG["configdate"];?></b></td></tr>
 
-<tr class="tbl2"><td><?=$LANG["text_date_format"];?></td><td><input type="text" name="date_format" value="<?=$a["date_format"];?>" style="width:160px"></td></tr>
-<tr class="tbl2"><td><?=$LANG["text_shortdate_format"];?></td><td><input type="text" name="shortdate_format" value="<?=$a["shortdate_format"];?>" style="width:160px"></td></tr>
-<tr class="tbl2"><td><?=$LANG["text_shortdm_format"];?></td><td><input type="text" name="shortdm_format" value="<?=$a["shortdm_format"];?>" style="width:160px"></td></tr>
-<tr class="tbl2"><td><?=$LANG["text_datetime_format"];?></td><td><input type="text" name="datetime_format" value="<?=$a["datetime_format"];?>" style="width:160px"></td></tr>
-<tr class="tbl2"><td><?=$LANG["text_datetimes_format"];?></td><td><input type="text" name="datetimes_format" value="<?=$a["datetimes_format"];?>" style="width:160px"></td></tr>
-<tr class="tbl2"><td><?=$LANG["language"];?></td><td><SELECT name="lang" style="width:160px">
+<tr class="tbl2"><td><?php=$LANG["text_date_format"];?></td><td><input type="text" name="date_format" value="<?php=$a["date_format"];?>" style="width:160px"></td></tr>
+<tr class="tbl2"><td><?php=$LANG["text_shortdate_format"];?></td><td><input type="text" name="shortdate_format" value="<?php=$a["shortdate_format"];?>" style="width:160px"></td></tr>
+<tr class="tbl2"><td><?php=$LANG["text_shortdm_format"];?></td><td><input type="text" name="shortdm_format" value="<?php=$a["shortdm_format"];?>" style="width:160px"></td></tr>
+<tr class="tbl2"><td><?php=$LANG["text_datetime_format"];?></td><td><input type="text" name="datetime_format" value="<?php=$a["datetime_format"];?>" style="width:160px"></td></tr>
+<tr class="tbl2"><td><?php=$LANG["text_datetimes_format"];?></td><td><input type="text" name="datetimes_format" value="<?php=$a["datetimes_format"];?>" style="width:160px"></td></tr>
+<tr class="tbl2"><td><?php=$LANG["language"];?></td><td><SELECT name="lang" style="width:160px">
 <?php
 $lng=$a["language"];
 
@@ -99,7 +99,7 @@ while ($entry=$d->read()) {
 	}
 ?>
 </SELECT></td></tr>
-<tr class="tbl1"><td colspan="2" align="center"><input type="submit" value="<?=$LANG["save"];?>"></td></tr>
+<tr class="tbl1"><td colspan="2" align="center"><input type="submit" value="<?php=$LANG["save"];?>"></td></tr>
 </table>
 <input type="hidden" name="action" value="1">
 <input type="hidden" name="st" value="config">

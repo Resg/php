@@ -1,4 +1,4 @@
-<?
+<?php
 $inpage=40;
 
 $HTTP_GET_VARS["dateoff"]=1;

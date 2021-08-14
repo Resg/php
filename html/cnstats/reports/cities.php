@@ -1,4 +1,4 @@
-<?
+<?php
 $inpage=40;
 
 $domains=intval($_GET["domains"]);
@@ -67,8 +67,8 @@ if ($start==0 && gdVersion()!=0) {
 ?>
 <HTML>
 <HEAD>
-<TITLE><?=$LANG["softname"];?></TITLE>
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=<?=$LANG["charset"];?>">
+<TITLE><?php=$LANG["softname"];?></TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=<?php=$LANG["charset"];?>">
 <STYLE TYPE="text/css">
 <!--
 td {font-family:tahoma;font-size: 11px; color: #333}
@@ -78,17 +78,17 @@ a:hover {text-decoration:underline}
 </STYLE>
 </HEAD>
 <BODY style='margin:0;'>
-<img src="graph/cities.php?zoom=1&r=<?=urlencode(microtime());?>" width='770' height='577' border='0'><br>
+<img src="graph/cities.php?zoom=1&r=<?php=urlencode(microtime());?>" width='770' height='577' border='0'><br>
 <div align=right><img src="img/none.gif" width="1" height="3"></div>
 <div align=center>
 <table cellspacing="1" cellpadding="0" border="0">
 <tr>
-<?
+<?php
 if ($tld!=0) {
 	print "<td align=right><span style='font-size:11px;font-weight:bold;'><img src=img/countries/".strtolower($rtld).".gif width=18 height=12 border=0 align=absmiddle hspace=4>".$title." </span></td><td width=50>&nbsp;</td>";
 }
 ?>
-<td width=40><?=$LANG["sessionss"];?>:&nbsp;&nbsp;</td>
+<td width=40><?php=$LANG["sessionss"];?>:&nbsp;&nbsp;</td>
 <td width=8><img src="img/c6.gif" width="11" height="11" border="0"></td><td width='80'>&nbsp;> 1 000</td>
 <td width=8><img src="img/c5.gif" width="9" height="11" border="0"></td><td width='70'>&nbsp;> 100</td>
 <td width=8><img src="img/c4.gif" width="9" height="11" border="0"></td><td width='60'>&nbsp;> 10</td>
@@ -120,28 +120,28 @@ function wopen(name,url,w,h) {
 
 <div align="center">
 <table cellspacing="0" cellpadding="0" border="0"><tr><td style="background-image:url('img/cityworld.gif');">
-<img src="graph/cities.php?r=<?=urlencode(microtime());?>" width="465" height="348" border="0"><br>
+<img src="graph/cities.php?r=<?php=urlencode(microtime());?>" width="465" height="348" border="0"><br>
 </td></tr></table></div>
 <img src="img/none.gif" width="1" height="3"><div align=right>
 <table cellspacing="1" cellpadding="0" border="0">
 <tr>
-<td width=40><?=$LANG["sessionss"];?>:&nbsp;&nbsp;</td>
+<td width=40><?php=$LANG["sessionss"];?>:&nbsp;&nbsp;</td>
 <td width=8><img src="img/c5.gif" width="9" height="11" border="0"></td><td width='80'>&nbsp;> 1 000</td>
 <td width=8><img src="img/c4.gif" width="9" height="11" border="0"></td><td width='70'>&nbsp;> 100</td>
 <td width=8><img src="img/c3.gif" width="9" height="11" border="0"></td><td width='60'>&nbsp;> 10</td>
 <td width=8><img src="img/c2.gif" width="9" height="11" border="0"></td><td width='50'>&nbsp;> 5</td>
 <td width=8><img src="img/c1.gif" width="9" height="11" border="0"></td><td width='40'>> 0</td>
 <td class="tbl1" bgcolor="#D4F3D7"><img src="img/zoom.gif" width="18" height="17" hspace="2" vspace="2" border="0"></td>
-<?
+<?php
 if ($tld!=0) $zcode=$code;
 ?>
-<td class="tbl1" bgcolor="#D4F3D7">&nbsp;<a href="javascript:wopen('map','index.php?nowrap=1&amp;zoom=1&amp;st=<?=$st;?>&amp;stm=<?=$stm;?>&amp;ftm=<?=$ftm;?>&amp;tld=<?=$zcode;?>&amp;filter=<?=urlencode($filter);?>',770,600);"><?=$LANG["zoomin"];?></a>&nbsp;</td>
+<td class="tbl1" bgcolor="#D4F3D7">&nbsp;<a href="javascript:wopen('map','index.php?nowrap=1&amp;zoom=1&amp;st=<?php=$st;?>&amp;stm=<?php=$stm;?>&amp;ftm=<?php=$ftm;?>&amp;tld=<?php=$zcode;?>&amp;filter=<?php=urlencode($filter);?>',770,600);"><?php=$LANG["zoomin"];?></a>&nbsp;</td>
 </tr>
 <tr><td colspan=13><img src="img/none.gif" width="1" height="3"></td></tr>
 <tr><td colspan=13 bgcolor="#b8e1bd"><img src="img/none.gif" width="1" height="1"></td></tr>
 <tr><td colspan=13><img src="img/none.gif" width="1" height="3"></td></tr></table>
 </div>
-<?
+<?php
 	}
 
 LeftRight($start,$inpage,$num,$count,0,5);

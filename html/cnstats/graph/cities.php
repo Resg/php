@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 session_register("DATA");
 $DATA=$_SESSION["DATA"];

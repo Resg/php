@@ -1,5 +1,5 @@
 
-<?
+<?php
 $curpage = $_SERVER['REQUEST_URI'];
 $menu = array (
 	'm_salton' => '/about/',
@@ -23,7 +23,7 @@ $menu = array (
 ?>
 
 <ul id="menu">
-<? foreach($menu as $id => $link) {
+<?php foreach($menu as $id => $link) {
 	echo '<li';
 	if(is_array($link)) {
 

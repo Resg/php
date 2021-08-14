@@ -1,4 +1,4 @@
-<?
+<?php
 $inpage=40;
 
 $domains=intval($HTTP_GET_VARS["domains"]);

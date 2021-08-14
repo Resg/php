@@ -23,7 +23,7 @@ print $TABLE; ?>
 </td></tr>
 </table>
 <br>
-<?php 
+<?php
 	print $TABLE;
 	if (!empty($HTTP_SERVER_VARS["HTTP_HOST"])) $HTTP_SERVER_VARS["HTTP_HOST"]="http://".$HTTP_SERVER_VARS["HTTP_HOST"];
 ?>
@@ -31,11 +31,11 @@ print $TABLE; ?>
 <tr class=tbl2><td>
 &lt;script language="javascript"&gt;<br>
 cnsd=document;cnsd.cookie="b=b";cnsc=cnsd.cookie?1:0;<br>
-document.write('&lt;img src="<?=$HTTP_SERVER_VARS["HTTP_HOST"];?>/cnstats/cntg.php?c='+cnsc+'&r='+escape(cnsd.referrer)+'&p='+escape(cnsd.location)+'" width="1" height="1" border="0"&gt;');<br>
-&lt;/script&gt;&lt;noscript&gt;&lt;img src="<?=$HTTP_SERVER_VARS["HTTP_HOST"];?>/cnstats/cntg.php?468&c=0" width="1" height="1" border="0"&gt;&lt;/noscript&gt;<br>
+document.write('&lt;img src="<?php=$HTTP_SERVER_VARS["HTTP_HOST"];?>/cnstats/cntg.php?c='+cnsc+'&r='+escape(cnsd.referrer)+'&p='+escape(cnsd.location)+'" width="1" height="1" border="0"&gt;');<br>
+&lt;/script&gt;&lt;noscript&gt;&lt;img src="<?php=$HTTP_SERVER_VARS["HTTP_HOST"];?>/cnstats/cntg.php?468&c=0" width="1" height="1" border="0"&gt;&lt;/noscript&gt;<br>
 </td></tr>
 </table>
-<?php 
+<?php
 
 $NOFILTER=1;
 ?>

@@ -1,4 +1,4 @@
-<?
+<?php
 $inpage=40;
 
 $filter=$HTTP_GET_VARS["filter"];

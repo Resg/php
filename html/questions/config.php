@@ -1,4 +1,4 @@
-<?
+<?php
 $STATS_CONF["dbname"]="salton";
 $STATS_CONF["sqlhost"]="localhost";
 $STATS_CONF["sqluser"]="root";

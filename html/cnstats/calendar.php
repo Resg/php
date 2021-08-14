@@ -1,4 +1,4 @@
-<?
+<?php
 include "_funct.php";
 
 @mysql_connect($STATS_CONF["sqlhost"],$STATS_CONF["sqluser"],$STATS_CONF["sqlpassword"]) or die("Error connectiong to database.\n<hr size=1><b>Host:</b> ".$STATS_CONF["sqlhost"]."\n<br><b>Login:</b> ".$STATS_CONF["sqluser"]."\n<br><b>Using password</b>: ".(empty($STATS_CONF["sqlpassword"])?"no":"yes"));
@@ -14,8 +14,8 @@ $MONTH=$LANG_MONTH;
 ?>
 <HTML>
 <HEAD>
-<TITLE><?=$LANG["softname"];?></TITLE>
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=<?=$LANG["charset"];?>">
+<TITLE><?php=$LANG["softname"];?></TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=<?php=$LANG["charset"];?>">
 <STYLE>
 <!--
 .tiny {font-size:9px;font-family:tahoma;}
@@ -26,7 +26,7 @@ a:hover {text-decoration:underline}
 <SCRIPT>
 <!--
 function ret(str) {
-	var nel=window.opener.document.getElementById("<?=$el;?>");
+	var nel=window.opener.document.getElementById("<?php=$el;?>");
 	nel.value=str;
 	window.close();
 	}
@@ -34,7 +34,7 @@ function ret(str) {
 </SCRIPT>
 </HEAD>
 <BODY marginwidth=0 marginheight=0 topmargin=0 bottommargin=0 leftmargin=0 rightmargin=0 bgcolor=white background="img/bg.gif">
-<?
+<?php
 
 function ShowCalendar($stamp,$p,$hm) {
 	GLOBAL $MONTH,$day,$month,$year,$prom;

@@ -1,4 +1,4 @@
-<?
+<?php
 $LANG["charset"]="iso8859-1";
 
 $LANG["site statistic"]="Site Statistics";
