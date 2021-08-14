@@ -1,0 +1,20 @@
+h1 {font-size:11px;font-weight:bold;font-family:verdana;padding-left:10px;}
+pre {color:#34783E;font-size:12px;font-family:courier new;}
+hr {height:1px;color:#B8E1BD;}
+ul {margin:10px 0 0 15px;}
+.tiny {font-size:9px;}
+select,input,td {font-family:tahoma,sans-serif;font-size:11px;}
+td.title {font-family:tahoma,sans-serif;font-size:11px;font-weight:bold;}
+a,a:visited {text-decoration:none;color:blue;}
+a:hover {text-decoration:underline}
+a.top_menu {text-decoration:none;font-size:10px;}
+.tbl0 {background-color:#EFEFEF;}
+.tbl1 {background-color:#EFEFEF;}
+.tbl2 {background-color:#EFEFEF;}
+.vis1 { visibility:visible; display:inline; }
+.vis2 { visibility:hidden; display:none; }
+.ttl {width:100%;background:#EFEFEF;background-image:url("img/bg.gif");}
+.m0 {margin:0px;}
+.hint {font-size:9px;color:gray;}
+
+.tblborder{background:gray;}

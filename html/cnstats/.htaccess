@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "CNStats"
+AuthUserFile  /home/httpd/www.salton.ru/html/cnstats/.htpasswd
+Require valid-user

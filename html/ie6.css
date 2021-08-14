@@ -1,0 +1,33 @@
+#splashbox object {margin:0px 0px 0px -668px;}
+
+#production, #konkurs { float:left;}
+
+.tabs a, .tabs span  { line-height:17px;}
+
+
+#right { margin-left:252px; height:1%;padding-bottom:203px;}
+#left { width:252px; height:700px;}
+
+#wrapper .content { height:100%; margin-bottom:-203px; }
+
+img.png {
+	width: expression(width);
+	filter: expression( (runtimeStyle.filter == '') ? runtimeStyle.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(src='"+src+"', sizingMethod='image')" : '',src = '/js/pixel.gif');
+} 
+
+#facebox .p_tl, #facebox .p_tr, #facebox .p_bl, #facebox .p_br {
+	filter	: expression(
+		(runtimeStyle.filter == '') ? runtimeStyle.filter = 'progid:DXImageTransform.Microsoft.AlphaImageLoader(src='+currentStyle.backgroundImage.split('\"')[1]+', sizingMethod=crop)' : runtimeStyle.filter,
+		runtimeStyle.backgroundImage = 'none');
+}
+
+
+#facebox .popup_content, #facebox .border_wrap { float:left;}
+#facebox .border_wrap { margin-bottom:-29px;}
+#facebox .popup_content { position:static; }	
+/*#facebox .p_tr, #facebox .p_br { right:-1px;}*/
+#facebox .p_br, #facebox .p_bl { }
+#facebox a.close { right:4px;}
+
+
+

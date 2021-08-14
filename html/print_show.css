@@ -1,0 +1,11 @@
+#menu, #konkurs, .leftcol > a, h1, #right > .feat, #yandex-search, #bg-bot, #bg-top, #ya-share, .hit, .color,
+#assorti, .feat { display:none;}
+#logo { margin-left:20px;}
+.imgswap a, .leftcol .back { display:block;}
+.content, #footer {float:left;}
+#right {
+	margin-left:20px;
+	clear:both;
+}
+
+

@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# disable filename globbing
+set -f
+
+echo Content-type: text/plain
+echo
+
+echo
+
+echo REMOTE_ADDR = $REMOTE_ADDR

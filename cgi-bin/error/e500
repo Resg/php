@@ -1,0 +1,48 @@
+#!/usr/bin/perl
+
+print "Content-type: text/html\n\n";
+
+$url = @ENV{'REQUEST_URI'};
+$http_host = @ENV{'HTTP_HOST'};
+$s_signature = @ENV{'SERVER_SIGNATURE'};
+$s_name = @ENV{'SERVER_NAME'};
+$lang = @ENV{'HTTP_ACCEPT_LANGUAGE'};
+
+
+
+print "<html>\n";
+print "<head>\n";
+print "<meta http-equiv=\"Content-Type\" content=\"text/html;\">\n";
+print "<title>Error 500 - Internal Server Error</title>\n";
+print "</head>\n";
+print "<body bgcolor=\"#FFFFFF\">\n";
+if ( $lang eq "ru") {
+    print "<h1>Внутренняя Ошибка Сервера</h1>\n";
+    print "Сервер встретил внутреннюю ошибку или ошибку в конфигурации сервера<br> и не в состоянии завершить ваш запрос.<br>\n";
+    print "Пожалуйста обратитесь к администратору сервера (tty01\@ruyan.ru) и проинформируйте его о времени когда поизошла ошибка и о своих действиях которые вызвали данную ошибку.<br>\n";
+    print "<br>\n";
+    print "Дополнительная информация относительно этой ошибки может быть доступна в лог-файлах ошибок на сервере.<br>\n";
+    } else {
+    print "<h1>Internal Server Error</h1>\n";
+    print "The server encountered an internal error or misconfiguration and was unable to complete your request.<br>\n";
+    print "Please contact the server administrator, tty01\@ruyan.ru and inform them of the time the error occurred, and anything you might have done that may have caused the error.<br>\n";    
+    print "<br>\n";
+    print "More information about this error may be available in the server error log.<br>\n";
+    }
+print "<hr>\n";
+print "$s_signature\n";
+print "<IMG SRC=\"http://www.ruyan.ru/apache_pb.gif\" ALT=\"Apache\">";
+print "</body>\n";
+print "</html>\n";
+
+
+
+
+
+
+
+
+
+
+
+

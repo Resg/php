@@ -1,0 +1,12 @@
+<public:component>
+	<script language="JavaScript">
+		if(element.src.match(/^.+\.png$/i)){
+			element.runtimeStyle.filter = 
+				'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="' 
+				+ element.src
+				+ '", sizingMethod="crop")';
+			element.className += '';
+			element.src = '/i/s.gif';
+		}
+	</script>
+</public:component>

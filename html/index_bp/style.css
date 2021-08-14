@@ -1,0 +1,79 @@
+body {margin:0px;padding:0px;border:none;font:13px Tahoma;color:#686868;}
+* html img.png {behavior:url('/js/pngfix.htc');}
+img {border:none;}
+a {font:13px Tahoma;color:#686868;outline:none;}
+html, body {height:100%; margin:0px; padding:0px;}
+#wrapper {height:100%;text-align:center;position:relative;}
+html>body #wrapper {min-height:100%;height:auto;}
+#footer {position:absolute;left:0;bottom:0;clear:both;height:203px;background:url(/i/bg_bottom.png) 50% 100% no-repeat;width:100%;}
+#clear {visibility:hidden;height:203px;clear:both;}
+p {margin:0px 0px 20px 0px;line-height:18px;}
+
+h1 {margin:0px 0px 31px -16px;height:60px;background:url(/i/h_under.gif) 0% 100% no-repeat;padding-left:16px;position:relative;}
+h2 {margin:0px 0px 8px 0px;}
+
+.content {width:790px;margin:0px auto 0px auto;text-align:left;position:relative;}
+
+#left {float:left;width:260px !important;width:257px;padding-top:47px;}
+/*#logo {height:110px;background:url(/i/slogan.gif) 11px 100% no-repeat;}*/
+#menu {padding:0px;margin:18px 0px 0px 0px;width:200px;}
+#menu li {list-style-type:none;background:url(/i/dash.gif) bottom left repeat-x;padding:4px 4px 0px 14px;height:22px;}
+#menu li.last-child {background:none;}
+#production {position:relative;left:-4px;top:10px;}
+#konkurs {position:relative;left:5px;top:3px;}
+
+#copy {color:#b3b3b3;font-size:11px;padding:39px 0px 13px 0px;}
+#cetis a {color:#b3b3b3;font-size:11px;text-decoration:none;}
+#cetis img {float:left;}
+#upeco {position:absolute;right:49px;top:40px;}
+
+#right {margin-left:262px !important;margin-left:259px;position:relative;z-index:5;padding-top:61px;//height:1%;}
+.content #right.index {background:url(/i/poster.jpg) 73px 35px no-repeat;padding-top:464px;position:relative;}
+#story {margin-left:260px !important;margin-left:257px;position:relative;z-index:5;background:url(/i/poster2.jpg) 151px 1px no-repeat;padding-top:382px;}
+#opinions {margin-bottom:40px;}
+#opinions div.story {float:left;height:70px;margin-bottom:4px;z-index:6;padding:0px 0px 0px 7px;position:relative;}
+#opinions div.act {background:url(/i/h_under.gif) bottom left no-repeat;}
+#opinions p {margin:0px 0px 0px 5px;}
+#opinions p.metacaps {margin-bottom:20px;}
+
+#jump {margin:4px 0px 0px 14px;}
+
+.story {}
+
+#splashbox object {position:relative;left:50%;margin-left:-651px;}
+
+#contest {position:absolute;left:-89px;top:348px;z-index:10;}
+#story #contest {position:absolute;top:250px;left:-54px;}
+
+
+#quote {margin:46px 0px 40px 16px;font:17px Tahoma;;color:black;}
+#quote span {font-size:10px;color:#686868;display:block;margin-bottom:7px;}
+#look {margin:0px 0px 72px 11px;}
+
+
+.what p {font-size:12px;color:black;margin-bottom:6px;}
+p.big {font-size:14px;}
+.what p.big {margin-bottom:11px;}
+.what p strong {color:#fd4703;}
+.what #left_block {float:left;width:286px !important;width:283px;position:relative;}
+.what #left_block p {margin-right:40px;}
+.what #right_block {margin-left:286px !important;margin-left:283px;}
+.what #product {position:relative;top:-10px;left:32px;}
+.what #slogan {position:absolute;margin:18px 0px 0px -18px !important;margin:12px 0px 0px -16px;;}
+.what div {}
+
+
+.exp p {color:black;margin-bottom:14px;margin-right:-5px;}
+.exp .left_block {float:left;width:250px !important;width:247px;}
+.exp .right_block {margin-left:250px !important;margin-left:247px;}
+.exp .stages {background:url(/i/num.gif) top left no-repeat;margin-top:-6px;}
+.exp .stages div {padding-left:32px;}
+.exp .left_block  p {width:205px;}
+.exp .right_block  p {width:260px;margin-right:-30px;position:relative;}
+.exp .fotos {margin:30px 0px 23px 0px;}
+.exp .fotos a {margin-right:7px;}
+.exp .small {font-size:10px;color:#B2B2B2;background:url(/i/s_under.jpg) bottom left no-repeat;padding:4px 0px 13px 6px;position:relative;left:-6px;margin-bottom:18px;}
+
+.clear {clear:both;}
+
+#splashbox {overflow:hidden;}

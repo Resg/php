@@ -1,0 +1,30 @@
+#!/usr/bin/perl
+
+print "Content-type: text/html\n\n";
+
+$url = @ENV{'REQUEST_URI'};
+$http_host = @ENV{'HTTP_HOST'};
+$s_signature = @ENV{'SERVER_SIGNATURE'};
+$s_name = @ENV{'SERVER_NAME'};
+$lang = @ENV{'HTTP_ACCEPT_LANGUAGE'};
+
+
+
+print "<html>\n";
+print "<head>\n";
+print "<meta http-equiv=\"Content-Type\" content=\"text/html;\">\n";
+print "<title>Error 404 - Document not found</title>\n";
+print "</head>\n";
+print "<body bgcolor=\"#FFFFFF\">\n";
+if ( $lang eq "ru") {
+    print "<h1>Документ не найден</h1>\n";
+    print "Запрошенный URL $url не найден на сервере.\n";
+    } else {
+    print "<h1>Not found</h1>\n";
+    print "The requested URL $url was not found on this server.\n";
+    }
+print "<hr>\n";
+print "$s_signature\n";
+print "<IMG SRC=\"http://www.ruyan.ru/apache_pb.gif\" ALT=\"Apache\">";
+print "</body>\n";
+print "</html>\n";
